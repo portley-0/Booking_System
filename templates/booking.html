@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block main_content %}
+
+<form action="" method="POST" novalidate>
+    {{ form.hidden_tag() }}
+    {{ form.booking.label }}
+    {{ form.booking() }}
+    {% for error in form.booking.errors %}
+        {{ error }}
+    {% endfor %}
+    <br />
+    {{ form.date.label }}
+    {{ form.date() }}
+    {% for error in form.date.errors %}
+        {{ error }}
+    {% endfor %}
+    <br />
+    {{ form.submit() }}
+</form>
+<h2 class="confirmation">{{ confirmation }}</h2>
+
+<h2>
+    <a href="{{ url_for('dashboard') }}">View My Sessions</a>
+</h2>
+
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+{% endblock %}

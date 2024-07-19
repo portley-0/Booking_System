@@ -1,0 +1,101 @@
+@font-face {
+	font-family: sport_font;
+	src: url(sport_font.ttf);
+}
+
+@font-face {
+	font-family: main_font;
+	src: url(main_font.otf);
+}
+
+header {
+	background-color: blue;
+	color: #fff;
+	padding: 16px;
+}
+
+
+nav ul {
+	display: flex;
+	justify-content: flex-end;
+    list-style-type: none;
+    flex-direction: row-reverse 
+}
+
+nav li {
+	margin: 0 5px;
+}
+
+nav a {
+	color: #fff;
+}
+
+body { 
+    margin: 0;
+	text-align: center;
+}
+
+table {
+    border-collapse: collapse;
+	width: 40%;
+	margin-left: auto;
+	margin-right: auto
+}
+
+th, td {
+    border: 3px solid black;
+	height: 40px;
+}
+
+h1 {
+	text-align: center;
+}
+
+.welcome{
+	font-family: 'sport_font';
+	font-size: 400%;
+}
+
+a, li, form, h1, h2, p {
+	font-family: 'main_font';
+}
+
+a {
+	color: black;
+}
+
+form {
+	font-size: 150%;
+}
+
+.confirmation {
+	color: blue;
+}
+
+.cancel {
+	color: red;
+}
+
+.row {
+    width: 99%;
+    height: 300px;
+    margin: 0%;
+    border: 7px solid #000000;
+}
+
+.box1 {
+	width: 50%;
+	height: 100%;
+	float: left;
+	background-color: blue;
+	background-image: url(gym.jpg);
+	background-size: cover;
+}
+
+.box2 {
+    width: 50%;
+    height: 100%;
+    float: right;
+    background-color: white;
+}
+

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <title>Alpha Gym</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" />
+    </head>
+    <body>
+        <header>
+            <nav>
+                <ul>
+                    {% if g.user %}
+                    <li>User id: {{ g.user }}</li>
+                    <li><a href="{{ url_for('logout') }}">Logout</a></li>
+                    <li><a href="{{ url_for('index') }}">Home</a></li>
+                    {% else %}
+                    <li><a href="{{ url_for('register') }}">Register</a></li>
+                    <li><a href="{{ url_for('login') }}">Login</a></li>
+                    <li><a href="{{ url_for('index') }}">Home</a></li>
+                    {% endif %}  
+                </ul>
+            </nav>
+        </header>
+
+        <br />
+        <br />
+
+        {% block main_content %}{% endblock %}
+
+        <br />
+        <br />
+        <br />
+        <br />
+
+
+        <div class="row">
+            <div class="box1"></div><div class="box2"><h1>Welcome!</h1><br /><p>Opening Times : <br />9am - 1pm<br />2pm - 6pm<br /> Mon - Sun<br /><br />This project was created by Oisin Portley</p></div>
+        </div>
+
+    </body>
+</html>

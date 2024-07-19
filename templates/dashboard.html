@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block main_content %}
+
+<h1>My Sessions</h1>
+    <table>
+    {% for row in rows %}
+        <tr>
+            <td>{{ row['id'] }}</td>
+            <td>{{ row['booking'] }}</td>
+            <td>{{ row['date'] }}</td>
+            <td><a href="{{ url_for('cancel_booking', id=row['id']) }}" class="cancel">Cancel</a></td>
+        </tr>
+    {% endfor %}
+    </table>
+
+<h2>
+    <a href="{{ url_for('book') }}">Book another Session!</a>
+</h2>
+
+<br />
+<br />
+<br />
+<br />
+<br />
+
+{% endblock %}
+
